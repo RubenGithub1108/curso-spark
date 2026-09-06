@@ -5,7 +5,11 @@ import sys
 from delta import configure_spark_with_delta_pip
 from pyspark.sql import SparkSession
 
-# Configurar soporte nativo de Hadoop en Windows
+# 1. Forzar a Spark y a sus workers a usar el ejecutable exacto de Conda activo
+os.environ["PYSPARK_PYTHON"] = sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
+
+# 2. Configurar soporte nativo de Hadoop en Windows
 HADOOP_HOME = r"C:\hadoop"
 if os.name == "nt":
     os.environ["HADOOP_HOME"] = HADOOP_HOME
