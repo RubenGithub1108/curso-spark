@@ -1,0 +1,7 @@
+{
+  "name": "PySpark Modern DevContainer",
+  "dockerComposeFile": ["../docker/docker-compose.yml"],
+  "service": "spark-master",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [8888, 4040, 15002]
+}

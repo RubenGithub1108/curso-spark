@@ -1,0 +1,19 @@
+services:
+  spark-master:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: spark_modern_lab
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+      - "15002:15002"
+    volumes:
+      - ../data:/workspace/data
+      - ../notebooks:/workspace/notebooks
+      - ../src:/workspace/src
+      - ../tests:/workspace/tests
+      - ../pyproject.toml:/workspace/pyproject.toml
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - PYSPARK_SUBMIT_ARGS=--packages io.delta:delta-spark_2.12:3.2.0 pyspark-shell
