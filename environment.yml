@@ -5,14 +5,13 @@ channels:
 dependencies:
   - python=3.11
   - openjdk=17
-  - notebook
-  - jupyterlab
   - pip
   - pip:
-      - pyspark>=3.5.0,<4.0.0
-      - delta-spark>=3.2.0
-      - pyarrow>=15.0.0
-      - pandas>=2.2.0
-      - pytest>=8.2.0
+      - pyspark==3.5.1
+      - delta-spark==3.2.0
+      - pyarrow>=14.0.0
+      - pandas>=2.1.0
+      - pytest>=8.0.0
       - chispa>=0.9.4
-      - ruff>=0.5.0
+      - jupyterlab>=4.0.0
+      - notebook>=7.0.0

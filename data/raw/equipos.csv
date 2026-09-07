@@ -1,8 +1,9 @@
-equipo_id,sigla,pais
-1,CHN,China
-2,DEN,Denmark
-3,NED,Netherlands
-4,USA,United States
-5,FIN,Finland
-6,NOR,Norway
-7,JAM,Jamaica
+equipo_id,equipo,sigla
+1,China,CHN
+2,China-2,CHN
+3,Denmark,DEN
+4,Denmark/Sweden,DEN
+5,Netherlands,NED
+6,United States,USA
+7,Finland,FIN
+8,Norway,NOR

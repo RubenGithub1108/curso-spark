@@ -1,8 +1,26 @@
+# Entornos virtuales
 .venv/
+env/
+spark_env/
+
+# Caches de Python y Jupyter
 __pycache__/
-*.parquet
-data/delta/
+*.py[cod]
 .ipynb_checkpoints/
-.pytest_cache/
-spark-warehouse/
+*/.ipynb_checkpoints/*
+
+# Metadatos y logs de Spark y Delta Lake
 metastore_db/
+derby.log
+spark-warehouse/
+_delta_log/
+
+# Salida de datos procesados (excepto el archivo keep)
+data/processed/*
+!data/processed/.gitkeep
+
+# Pruebas y empaquetado
+.pytest_cache/
+*.zip
+
+prompt.md
